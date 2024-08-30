@@ -6,7 +6,7 @@ from arfforgelearn.attribute_reorder import ARFFAttributeReorder
 from arfforgelearn.attribute_combiner import ARFFLabelCombiner
 from arfforgelearn.attribute_remover import ARFFAttributeRemover  # Nuevo import
 from arfforgelearn.instance_combiner import ARFFInstanceCombiner
-from arfforgelearn.ml_model_test_comparator import RandomForestModelComparison
+from arfforgelearn.ml_model_test_comparator import MLModelComparator
 
 def main():
     while True:
@@ -15,7 +15,7 @@ def main():
         print("2: Combinar dos etiquetas en una")
         print("3: Eliminar un atributo")  # Nueva opción
         print("4: Combinar instancias de dos archivos ARFF")
-        print("5: Entrenar y evaluar modelos Random Forest")
+        print("5: Entrenar y evaluar modelos de machine learning")
         print("6: Salir")
 
         choice = input("Seleccione una opción (1-6): ")
@@ -37,7 +37,7 @@ def main():
             combiner.process()
 
         elif choice == '5':
-            tester = RandomForestModelComparison()
+            tester = MLModelComparator()
             tester.process()
 
         elif choice == '6':
