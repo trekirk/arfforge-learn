@@ -1,0 +1,5 @@
+matplotlib
+pandas
+liac-arff
+scikit-learn
+PyGObject

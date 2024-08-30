@@ -1,0 +1,51 @@
+#!/usr/bin/python
+import sys
+sys.path.append('../src')
+
+from arfforgelearn.attribute_reorder import ARFFAttributeReorder
+from arfforgelearn.attribute_combiner import ARFFLabelCombiner
+from arfforgelearn.attribute_remover import ARFFAttributeRemover  # Nuevo import
+from arfforgelearn.instance_combiner import ARFFInstanceCombiner
+from arfforgelearn.ml_model_test_comparator import RandomForestModelComparison
+
+def main():
+    while True:
+        print("\nSeleccione una funcionalidad:")
+        print("1: Mover un atributo al final")
+        print("2: Combinar dos etiquetas en una")
+        print("3: Eliminar un atributo")  # Nueva opción
+        print("4: Combinar instancias de dos archivos ARFF")
+        print("5: Entrenar y evaluar modelos Random Forest")
+        print("6: Salir")
+
+        choice = input("Seleccione una opción (1-6): ")
+
+        if choice == '1':
+            reordener = ARFFAttributeReorder()
+            reordener.process()
+
+        elif choice == '2':
+            combiner = ARFFLabelCombiner()
+            combiner.process()
+
+        elif choice == '3':  # Nueva opción para eliminar un atributo
+            remover = ARFFAttributeRemover()
+            remover.process()
+
+        elif choice == '4':
+            combiner = ARFFInstanceCombiner()
+            combiner.process()
+
+        elif choice == '5':
+            tester = RandomForestModelComparison()
+            tester.process()
+
+        elif choice == '6':
+            print("Saliendo del programa...")
+            break
+
+        else:
+            print("Opción inválida. Por favor, seleccione una opción válida.")
+
+if __name__ == "__main__":
+    main()
