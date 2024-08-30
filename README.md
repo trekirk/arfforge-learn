@@ -67,8 +67,7 @@ The project is structured as follows:
   - `random_forest_test.py`: Script for training and evaluating Random Forest models.
   - `file_selector.py`: GTK-based file selector utility.
 
-```
-
+```plaintext
 project_root/
 ├── scripts/
 │   └── arfforgelearn_runner.py  # Main script to run the toolkit
@@ -81,9 +80,7 @@ project_root/
         ├── instance_combiner.py   # Script for combining instances from ARFF files
         ├── random_forest_test.py  # Script for training and evaluating Random Forest models
         └── file_selector.py       # GTK-based file selector utility
-
-´´´
-
+```
 
 ## Contributing
 
